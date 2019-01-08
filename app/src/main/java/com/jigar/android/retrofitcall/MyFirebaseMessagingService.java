@@ -23,19 +23,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
       NotificationManager notificationmanager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-//      String CHANNEL_ID = "my_channel_01";
-//
-//      NotificationCompat.Builder builder = new NotificationCompat.Builder(MyFirebaseMessagingService.this);
-//      builder.setSmallIcon(R.drawable.common_google_signin_btn_icon_dark);
-//      builder.setChannelId(CHANNEL_ID);
-//      builder.setContentTitle("Notification");
-//      builder.setContentText(messageBody);
-//      builder.setAutoCancel(true);
-//      builder.setVibrate(new long[]{200, 200, 200, 200});//,300,300
-//      builder.setSound(defaultSoundUri);
-//      //builder.setBadgeIconType(new_notification_counter);
-////                builder.setBadgeIconType(NotificationCompat.BADGE_ICON_SMALL);
-//      new_notification_counter++;
        Log.d(TAG, "From: " + remoteMessage.getFrom());
    }
 }
