@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.jigar.android.retrofitcall.Adapter.Adapter_getCandidate;
 import com.jigar.android.retrofitcall.Interfaces.Api;
 import com.jigar.android.retrofitcall.Models.Get_Candidate;
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
             }
         });
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         getPermission();
         client = LocationServices.getFusedLocationProviderClient(MainActivity.this);
         if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {//&& ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED

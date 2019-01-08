@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "408832681696",
+    "firebase_url": "https://fcm-test-617a3.firebaseio.com",
+    "project_id": "fcm-test-617a3",
+    "storage_bucket": "fcm-test-617a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408832681696:android:6bb1ebbcd4830de8",
+        "android_client_info": {
+          "package_name": "com.jigar.android.retrofitcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408832681696-nnbmamba5dau42so68krs75ru8l74a1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvlR63LS5kaYy9X9l7G_gS9nIGTU1Vxss"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
