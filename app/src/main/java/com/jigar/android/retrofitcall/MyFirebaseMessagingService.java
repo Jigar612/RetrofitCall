@@ -1,5 +1,6 @@
 package com.jigar.android.retrofitcall;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -22,6 +23,19 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
    public void onMessageReceived(RemoteMessage remoteMessage) {
 
       NotificationManager notificationmanager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+
+       String title = remoteMessage.getData().get("title");
+       String body = remoteMessage.getData().get("body");
+//       String icon = remoteMessage.getData().get(object_id);
+//       String objectType = remoteMessage.getData().get(objectType”);
+
+       NotificationCompat.Builder notification = new NotificationCompat.Builder(this)
+               .setContentTitle("ABC")
+               .setContentText(body)
+               .setSmallIcon(R.drawable.common_google_signin_btn_icon_dark);
+
+        notificationmanager.notify(0, notification.build());
 
        Log.d(TAG, "From: " + remoteMessage.getFrom());
    }
